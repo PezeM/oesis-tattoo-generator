@@ -18,26 +18,28 @@ import mpsmuggler from './data/mpsmuggler_overlays.js';
 import mpstunt from './data/mpstunt_overlays.js';
 import mpvinewood from './data/mpvinewood_overlays.js';
 import multiplayer from './data/multiplayer_overlays.js';
+import mpheist3 from './data/mpheist3_overlays.js';
 
 const allTattoos = {
-    "mpairraces_overlays": mpairraces,
-    "mpbeach_overlays": mpbeach,
-    "mpbiker_overlays": mpbiker,
-    "mpbusiness_overlays": mpbusiness,
-    "mpchristmas2_overlays": mpchristmas2,
-    "mpchristmas2017_overlays": mpchristmas2017,
-    "mpchristmas2018_overlays": mpchristmas2018,
-    "mpgunrunning_overlays": mpgunrunning,
-    "mphipster_overlays": mphipster,
-    "mpimportexport_overlays": mpimportexport,
-    "mplowrider_overlays": mplowrider,
-    "mplowrider2_overlays": mplowrider2,
-    "mpluxe_overlays": mpluxe,
-    "mpluxe2_overlays": mpluxe2,
-    "mpsmuggler_overlays": mpsmuggler,
-    "mpstunt_overlays": mpstunt,
-    "mpvinewood_overlays": mpvinewood,
-    "multiplayer_overlays": multiplayer
+    // "mpairraces_overlays": mpairraces,
+    // "mpbeach_overlays": mpbeach,
+    // "mpbiker_overlays": mpbiker,
+    // "mpbusiness_overlays": mpbusiness,
+    // "mpchristmas2_overlays": mpchristmas2,
+    // "mpchristmas2017_overlays": mpchristmas2017,
+    // "mpchristmas2018_overlays": mpchristmas2018,
+    // "mpgunrunning_overlays": mpgunrunning,
+    // "mphipster_overlays": mphipster,
+    // "mpimportexport_overlays": mpimportexport,
+    // "mplowrider_overlays": mplowrider,
+    // "mplowrider2_overlays": mplowrider2,
+    // "mpluxe_overlays": mpluxe,
+    // "mpluxe2_overlays": mpluxe2,
+    // "mpsmuggler_overlays": mpsmuggler,
+    // "mpstunt_overlays": mpstunt,
+    // "mpvinewood_overlays": mpvinewood,
+    // "multiplayer_overlays": multiplayer,
+    "mpheist3": mpheist3
 }
 
 const newTattooList = [];
@@ -47,7 +49,7 @@ function generateTattoos(tattoos, tattooCollection) {
     for (i; i < tattoos.length; i++) {
         const tattoo = tattoos[i];
         newTattooList.push({
-            collection: tattooCollection,
+            tattoo_collection: tattooCollection,
             hashNameMale: tattoo.HashNameMale,
             hashNameFemale: tattoo.HashNameFemale,
             name: native.getLabelText(tattoo.Name),
