@@ -39,7 +39,7 @@ const allTattoos = {
     // "mpstunt_overlays": mpstunt,
     // "mpvinewood_overlays": mpvinewood,
     // "multiplayer_overlays": multiplayer,
-    "mpheist3": mpheist3
+    "mpheist3_overlays": mpheist3
 }
 
 const newTattooList = [];
