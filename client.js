@@ -19,6 +19,7 @@ import mpstunt from './data/mpstunt_overlays.js';
 import mpvinewood from './data/mpvinewood_overlays.js';
 import multiplayer from './data/multiplayer_overlays.js';
 import mpheist3 from './data/mpheist3_overlays.js';
+import mpsum from './data/mpSum_overlays.js';
 
 const allTattoos = {
     // "mpairraces_overlays": mpairraces,
@@ -39,7 +40,8 @@ const allTattoos = {
     // "mpstunt_overlays": mpstunt,
     // "mpvinewood_overlays": mpvinewood,
     // "multiplayer_overlays": multiplayer,
-    "mpheist3_overlays": mpheist3
+    // "mpheist3_overlays": mpheist3
+    "mpSum_overlays": mpsum
 }
 
 const newTattooList = [];
@@ -52,7 +54,7 @@ function generateTattoos(tattoos, tattooCollection) {
             tattoo_collection: tattooCollection,
             hashNameMale: tattoo.HashNameMale,
             hashNameFemale: tattoo.HashNameFemale,
-            name: native.getLabelText(tattoo.Name),
+            name: tattoo.FullName ? tattoo.FullName : native.getLabelText(tattoo.Name),
             zone: tattoo.ZoneID,
             price: tattoo.Price,
         });
@@ -63,6 +65,7 @@ function generateTattoos(tattoos, tattooCollection) {
 
 alt.on('consoleCommand', (command , ...args) => {
     if(command === 'generateTattoos'){
+        newTattooList = [];
         for (const tattooCollection in allTattoos) {
             if (allTattoos.hasOwnProperty(tattooCollection)) {
                 const tattoos = allTattoos[tattooCollection];
