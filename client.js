@@ -56,7 +56,7 @@ function generateTattoos(tattoos, tattooCollection) {
             hashNameFemale: tattoo.HashNameFemale,
             name: tattoo.FullName ? tattoo.FullName : native.getLabelText(tattoo.Name),
             zone: tattoo.ZoneID,
-            price: tattoo.Price,
+            price: Math.floor(tattoo.Price / 10),
         });
     }
 
